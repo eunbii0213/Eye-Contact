@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="20dp">
+    //스크롤뷰 이용
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    //설문조사 시작 질문
+    <TextView
+        android:id="@+id/Text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0. 설문조사를 시작하겠습니까?"
+        android:textSize="25dp" />
+
+
+    //설문조사 시작 체크박스
+    <CheckBox
+        android:id="@+id/ChkAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작함" />
+
+    //설문조사 첫 번째 질문
+    <TextView
+        android:id="@+id/Text2"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:gravity="bottom"
+        android:text="1. 평소 메이크업 스타일은?"
+        android:textSize="25dp"
+        android:visibility="invisible" />
+
+    //3개의 선택지를 묶는 RadioGroup
+    <RadioGroup
+        android:id="@+id/Rgroup1"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/nomakeup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="노메이크업" />
+
+        <RadioButton
+            android:id="@+id/natural"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내츄럴" />
+
+        <RadioButton
+            android:id="@+id/glitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="화려함" />
+
+    </RadioGroup>
+
+    //선택완료 버튼
+    <Button
+        android:id="@+id/BtnOK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택완료"
+        android:visibility="invisible" />
+
+    //선택에 따라 맞는 이미지 띄울 이미지뷰
+    <ImageView
+        android:id="@+id/ImgLens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+    //설문조사 두 번째 질문
+    <TextView
+        android:id="@+id/Text3"
+        android:layout_width="wrap_content"
+        android:layout_height="139dp"
+        android:gravity="bottom"
+        android:text="2. 평소 렌즈 착용시 이물감이나 건조함을 느꼈나요?
+                                    (눈이 예민하신가요?)"
+        android:textSize="25dp"
+        android:visibility="invisible" />
+
+    //3개의 선택지를 묶는 RadioGroup
+    <RadioGroup
+        android:id="@+id/Rgroup2"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/no"
+            android:layout_width="122dp"
+            android:layout_height="match_parent"
+            android:text="그렇지않다" />
+
+        <RadioButton
+            android:id="@+id/maybe"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="보통" />
+
+        <RadioButton
+            android:id="@+id/yes"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="그렇다" />
+
+    </RadioGroup>
+
+    //선택완료 버튼
+    <Button
+        android:id="@+id/BtnOK2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택완료"
+        android:visibility="invisible" />
+
+    //선택에 따라 맞는 이미지 띄울 이미지뷰
+    <ImageView
+        android:id="@+id/ImgLens2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    //설문조사 세 번째 질문
+    <TextView
+        android:id="@+id/Text4"
+        android:layout_width="wrap_content"
+        android:layout_height="154dp"
+        android:gravity="bottom"
+        android:text="3. 렌즈 용품(렌즈 습윤제, 렌즈 세척기, 다목적용액등)에 대한 정보를 알고싶으신가요?"
+        android:textSize="25dp"
+        android:visibility="invisible" />
+
+    //3개의 선택지를 묶는 RadioGroup
+    <RadioGroup
+        android:id="@+id/Rgroup3"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:id="@+id/no2"
+            android:layout_width="151dp"
+            android:layout_height="match_parent"
+            android:text="아니요" />
+
+        <RadioButton
+            android:id="@+id/yes2"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:text="네" />
+
+    </RadioGroup>
+
+    //선택완료 버튼
+    <Button
+        android:id="@+id/BtnOK3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택완료"
+        android:visibility="invisible" />
+
+    //선택에 따라 맞는 이미지 띄울 이미지뷰
+    <ImageView
+        android:id="@+id/ImgLens3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    //RelativeLayout이용
+
+
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        //불러오기 버튼
+        <Button
+            android:id="@+id/load_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="불러오기" />
+
+        //저장하기 버튼
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="저장하기" />
+
+        //삭제하기 버튼
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="삭제하기" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/memo_edit"
+        android:layout_width="391dp"
+        android:layout_height="627dp"
+        android:layout_below="@+id/btn_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="top"
+        android:hint="ex)오렌즈/스페니쉬 그레이/원데이 = 착용감 좋음. 1달용. 그래픽12.8\n*메모장 사용법* >>렌즈 후기/정보를 입력하고 *저장하기*를 반드시 클릭하세요!\n저장한 내용을 다시 불러오고 싶다면 *불러오기* 버튼을 누르고 수정후에 *저장하기*를 눌러주세요.\n *삭제하기*를 누르면 저장했던 내용이 모두 사라집니다." />
+
+
+</RelativeLayout>

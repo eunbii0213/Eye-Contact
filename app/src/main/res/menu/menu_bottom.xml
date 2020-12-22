@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!-- 각각 항목을 메뉴 형식으로 만들기-->
+    <item android:id="@+id/lens"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:title="Lens"
+        app:cnb_iconColor="@color/navigation_color_add"/>
+
+    <item android:id="@+id/lensCare"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:title="LensCare"
+        app:cnb_iconColor="@color/navigation_color_add"/>
+
+    <item android:id="@+id/test"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:title="Test"
+        app:cnb_iconColor="@color/navigation_color_add"/>
+
+    <item android:id="@+id/calender"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:title="Calender"
+        app:cnb_iconColor="@color/navigation_color_add"/>
+
+    <item android:id="@+id/myPage"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"
+        android:title="MyPage"
+        app:cnb_iconColor="@color/navigation_color_add"/>
+
+</menu>
+
