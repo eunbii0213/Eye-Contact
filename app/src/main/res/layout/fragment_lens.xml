@@ -4,34 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <!-- 검색창 앞의 아이콘 -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="37sp"
-        android:layout_marginRight="8dp"
-        android:id="@+id/textView1"
-        android:text="O"
-        android:textStyle="bold"
-        android:textColor="#6200EE"/>
     <!-- 검색창 -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/textView1"
-        android:id="@+id/editTextFilter"
-        android:maxLength="15"
-        android:hint="궁금한 정보를 검색해보세요! / 15자 이내"/>
     <!-- 리스트뷰 불러오기 -->
+
+    <EditText
+        android:id="@+id/editTextFilter"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/MagnifyingButton"
+        android:hint="가격, 직경, 상품명으로 검색 / 15자 이내"
+        android:maxLength="15" />
+
     <ListView
+        android:id="@+id/listview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/editTextFilter"
-        android:textFilterEnabled="true"
-        android:id="@+id/listview1"
-        android:listSelector="#03DAC5" />
+        android:listSelector="?attr/colorButtonNormal"
+        android:scrollbarDefaultDelayBeforeFade="400"
+        android:scrollbarFadeDuration="250"
+        android:scrollbarSize="15dp"
+        android:textFilterEnabled="true" />
 
-
+    <Button
+        android:id="@+id/MagnifyingButton"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:background="#FFFFFF"
+        android:drawableBottom="@android:drawable/ic_menu_search" />
 
 
 </RelativeLayout>
