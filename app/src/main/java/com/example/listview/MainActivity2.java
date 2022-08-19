@@ -28,7 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         //build the menu
         ImageView icon = new ImageView(this);
-        icon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_action_dark_selector));
+        icon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.menu));
 
         FloatingActionButton actionButton = new FloatingActionButton.Builder(this)
 
@@ -43,27 +43,27 @@ public class MainActivity2 extends AppCompatActivity {
 
         //lens button
         ImageView lensIcon = new ImageView(this);
-        lensIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_action_dark_selector));
+        lensIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.lens));
         SubActionButton button1 = itemBuilder.setContentView(lensIcon).build();
 
         //lensCare button
         ImageView lensItemIcon = new ImageView(this);
-        lensItemIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_action_dark_selector));
+        lensItemIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.lenscare));
         SubActionButton button2 = itemBuilder.setContentView(lensItemIcon).build();
 
         //Test button
         ImageView testIcon = new ImageView(this);
-        testIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_action_dark_selector));
+        testIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.test));
         SubActionButton button3 = itemBuilder.setContentView(testIcon).build();
 
         //Calendar button
         ImageView calendarIcon = new ImageView(this);
-        calendarIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_action_dark_selector));
+        calendarIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.calendar));
         SubActionButton button4 = itemBuilder.setContentView(calendarIcon).build();
 
         //memo button
         ImageView memoItemIcon = new ImageView(this);
-        memoItemIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button_action_dark_selector));
+        memoItemIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.memo));
         SubActionButton button5 = itemBuilder.setContentView(memoItemIcon).build();
 
         FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)

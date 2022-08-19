@@ -5,33 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!-- 검색창 앞의 아이콘-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="37sp"
-        android:layout_marginRight="8dp"
-        android:id="@+id/textView1"
-        android:text="O"
-        android:textStyle="bold"
-        android:textColor="#6200EE"/>
     <!-- 검색창 -->
     <EditText
+        android:id="@+id/editTextFilter2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/textView1"
-        android:id="@+id/editTextFilter2"
-        android:maxLength="15"
-        android:hint="궁금한 렌즈 용품을 검색해보세요! / 15자 이내"/>
+        android:layout_toRightOf="@id/MagnifyingButton2"
+        android:hint="궁금한 렌즈 용품을 검색해보세요! / 15자 이내"
+        android:maxLength="15" />
     <!-- 리스트뷰 불러오기-->
+    <Button
+        android:id="@+id/magnifyingButton2"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:background="#FFFFFF"
+        android:drawableBottom="@android:drawable/ic_menu_search" />
+
     <ListView
+        android:id="@+id/listview2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/editTextFilter2"
-        android:textFilterEnabled="true"
-        android:id="@+id/listview2"
-        android:listSelector="#03DAC5" />
+        android:listSelector="#03DAC5"
+        android:textFilterEnabled="true">
 
-
+        <Button
+            android:id="@+id/MagnifyingButton2"
+            android:layout_width="48dp"
+            android:layout_height="37dp"
+            android:background="#FFFFFF"
+            android:drawableBottom="@android:drawable/ic_menu_search" />
+    </ListView>
 
 
 </RelativeLayout>
