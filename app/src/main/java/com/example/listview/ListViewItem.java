@@ -23,21 +23,6 @@ public class ListViewItem {
         this.drawable = drawable;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setDias(String dias) { this.dias = dias; }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-
     public Drawable getDrawable() {
         return drawable;
     }

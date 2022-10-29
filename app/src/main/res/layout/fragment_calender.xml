@@ -65,7 +65,7 @@
         android:layout_marginEnd="8dp"
         android:gravity="center|left"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:text=" 눈 관련 다양한 일정을 기록해보세요! \n 눈 건강을 위한 안과 권장 검진 기간은 6개월입니다!  "
+        android:text=" 눈 관련 다양한 일정을 기록해보세요. \n 안과 권장 검진 기간은 6개월입니다. "
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -9,9 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionMenu;
-import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
+
 
 public class MainActivity2 extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -30,51 +28,8 @@ public class MainActivity2 extends AppCompatActivity {
         ImageView icon = new ImageView(this);
         icon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.menu));
 
-        FloatingActionButton actionButton = new FloatingActionButton.Builder(this)
-
-                .setContentView(icon)
-
-                .build();
-
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        //build the buttons
-        SubActionButton.Builder itemBuilder = new SubActionButton.Builder(this);
-
-        //lens button
-        ImageView lensIcon = new ImageView(this);
-        lensIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.lens));
-        SubActionButton button1 = itemBuilder.setContentView(lensIcon).build();
-
-        //lensCare button
-        ImageView lensItemIcon = new ImageView(this);
-        lensItemIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.lenscare));
-        SubActionButton button2 = itemBuilder.setContentView(lensItemIcon).build();
-
-        //Test button
-        ImageView testIcon = new ImageView(this);
-        testIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.test));
-        SubActionButton button3 = itemBuilder.setContentView(testIcon).build();
-
-        //Calendar button
-        ImageView calendarIcon = new ImageView(this);
-        calendarIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.calendar));
-        SubActionButton button4 = itemBuilder.setContentView(calendarIcon).build();
-
-        //memo button
-        ImageView memoItemIcon = new ImageView(this);
-        memoItemIcon.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.memo));
-        SubActionButton button5 = itemBuilder.setContentView(memoItemIcon).build();
-
-        FloatingActionMenu actionMenu = new FloatingActionMenu.Builder(this)
-
-                .addSubActionView(button1)
-                .addSubActionView(button2)
-                .addSubActionView(button3)
-                .addSubActionView(button4)
-                .addSubActionView(button5)
-                .attachTo(actionButton)
-                .build();
 
         //5개의 메뉴에 들어갈 Fragment들
         lensFragment = new LensFragment();

@@ -24,7 +24,7 @@ public class TestFragment extends Fragment {
     ViewGroup viewGroup;
 
     public TextView text1, text2;
-    public CheckBox chkAgree;
+    public TextView questionOneText;
     public RadioGroup rGroup1;
     public RadioButton rdonomakeup, rdonatural, rdoglitter; //rdonomakeup은 nomakeup..다른 것도 마찬가지
     public Button btnOK;
@@ -36,22 +36,14 @@ public class TestFragment extends Fragment {
     public Button btnOK2;
     public ImageView imgLens2; //설문조사 두 번째 질문을 위한 선언
 
-    public TextView text4;
-    public RadioGroup rGroup3;
-    public RadioButton rdono2,rdoyes2;
-    public Button btnOK3;
-    public ImageView imgLens3; //설문조사 세 번째 질문을 위한 선언
-    //선언끝
-
+    public TextView noMakeUpText;
+    public TextView naturalText;
+    public TextView glitterText;
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_test,container,false);
-
-
-        text1 = viewGroup.findViewById(R.id.Text1);
-        chkAgree = viewGroup.findViewById(R.id.ChkAgree);
+        viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_test, container, false);
 
         text2 = viewGroup.findViewById(R.id.Text2);
         rGroup1 = viewGroup.findViewById(R.id.Rgroup1);
@@ -70,53 +62,8 @@ public class TestFragment extends Fragment {
         btnOK2 = viewGroup.findViewById(R.id.BtnOK2);
         imgLens2 = viewGroup.findViewById(R.id.ImgLens2);
 
-        text4 = viewGroup.findViewById(R.id.Text4);
-        rGroup3 = viewGroup.findViewById(R.id.Rgroup3);
-        rdono2 = viewGroup.findViewById(R.id.no2);
-        rdoyes2 = viewGroup.findViewById(R.id.yes2);
-        btnOK3 = viewGroup.findViewById(R.id.BtnOK3);
-        imgLens3 = viewGroup.findViewById(R.id.ImgLens3);
+        questionOneText = viewGroup.findViewById(R.id.questionOneText);
 
-
-
-        // 체크박스의 체크가 변경되면
-        chkAgree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
-                // 체크되면 모두 보이도록 설정
-                if (chkAgree.isChecked() == true) {
-                    text2.setVisibility(android.view.View.VISIBLE);
-                    text3.setVisibility(android.view.View.VISIBLE);
-                    text4.setVisibility(android.view.View.VISIBLE);
-                    rGroup1.setVisibility(android.view.View.VISIBLE);
-                    rGroup2.setVisibility(android.view.View.VISIBLE);
-                    rGroup3.setVisibility(android.view.View.VISIBLE);
-                    btnOK.setVisibility(android.view.View.VISIBLE);
-                    btnOK2.setVisibility(android.view.View.VISIBLE);
-                    btnOK3.setVisibility(android.view.View.VISIBLE);
-                    imgLens.setVisibility(android.view.View.VISIBLE);
-                    imgLens2.setVisibility(android.view.View.VISIBLE);
-                    imgLens3.setVisibility(android.view.View.VISIBLE);
-
-
-                }
-                // 체크되지 않으면 안 보이게 설정
-                else {
-                    text2.setVisibility(android.view.View.INVISIBLE);
-                    text3.setVisibility(android.view.View.INVISIBLE);
-                    text4.setVisibility(android.view.View.INVISIBLE);
-                    rGroup1.setVisibility(android.view.View.INVISIBLE);
-                    rGroup2.setVisibility(android.view.View.INVISIBLE);
-                    rGroup3.setVisibility(android.view.View.INVISIBLE);
-                    btnOK.setVisibility(android.view.View.INVISIBLE);
-                    btnOK2.setVisibility(android.view.View.INVISIBLE);
-                    btnOK3.setVisibility(android.view.View.INVISIBLE);
-                    imgLens.setVisibility(android.view.View.INVISIBLE);
-                    imgLens2.setVisibility(android.view.View.INVISIBLE);
-                    imgLens3.setVisibility(android.view.View.INVISIBLE);
-
-                }
-            }
-        });
 
         //첫 번째 선택완료 버튼
         btnOK.setOnClickListener(new View.OnClickListener() {
@@ -125,25 +72,29 @@ public class TestFragment extends Fragment {
                 switch (rGroup1.getCheckedRadioButtonId()) {
                     //노메이크업 radio버튼을 누르고 선택완료를 누르면
                     case R.id.nomakeup:
-                         //nomakeup(투명렌즈) 이미지를 띄웁니다
+                        //nomakeup(투명렌즈) 이미지, 투명렌즈 TOP3 목록을 띄웁니다
                         imgLens.setImageResource(R.drawable.nomakeup);
+                        questionOneText.setText("투명렌즈 TOP3 추천\n[알콘] 데일리스 토탈원 워터렌즈\n[알콘] 에어옵틱스 나이트 앤 데이 아쿠아\n[알콘] 오아시스 원데이");
+                       // questionOneText.setVisibility(View.VISIBLE);
                         break;
 
                     //내츄럴 radio버튼을 누르고 선택완료를 누르면
                     case R.id.natural:
                         //natural(자연스러운 그래픽의 렌즈) 이미지를 띄웁니다
                         imgLens.setImageResource(R.drawable.natural);
-
+                        questionOneText.setText("컬러렌즈 TOP3 추천\n[오렌즈] 비비링 원데이\n[오렌즈] 스칸디\n[오렌즈] 스페니쉬");
+                        //questionOneText.setVisibility(View.VISIBLE);
                         break;
 
                     //화려함 radio버튼을 누르고 선택완료를 누르면
                     case R.id.glitter:
                         //glitter(화려한 그래픽의 렌즈) 이미지를 띄웁니다
                         imgLens.setImageResource(R.drawable.glitter);
-
+                        questionOneText.setText("컬러렌즈 TOP3 추천\n[오렌즈] 시크리스 3콘\n[오렌즈] 오션\n[오렌즈] 크리스탈");
+                        //questionOneText.setVisibility(View.VISIBLE);
                         break;
 
-                        // radio버튼중 아무것도 선택안하고 선택완료를 누른다면
+                    // radio버튼중 아무것도 선택안하고 선택완료를 누른다면
                     default:
                         Toast.makeText(getActivity().getApplicationContext(), "올바른 방법으로 선택해주세요", Toast.LENGTH_SHORT)
                                 .show();
@@ -185,39 +136,7 @@ public class TestFragment extends Fragment {
             }
         });
 
-
-        //세 번째 선택완료 버튼
-        btnOK3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                switch (rGroup3.getCheckedRadioButtonId()) {
-
-                    //아니요 radio버튼을 누르고 선택완료를 누르면
-                    case R.id.no2:
-                        //no2(수고하셨습니다) 이미지를 띄웁니다
-                        imgLens3.setImageResource(R.drawable.no2);
-
-
-                        break;
-
-
-                    //네 radio버튼을 누르고 선택완료를 누르면
-                    case R.id.yes2:
-                        //yes2(하단바 클릭해보세요) 이미지를 띄웁니다
-                        imgLens3.setImageResource(R.drawable.yes2);
-
-                        break;
-
-
-
-                    // radio버튼중 아무것도 선택안하고 선택완료를 누른다면
-                    default:
-                        Toast.makeText(getActivity().getApplicationContext(), "올바른 방법으로 선택해주세요", Toast.LENGTH_SHORT)
-                                .show();
-                }
-            }
-        });
-
-    return viewGroup;
+        return viewGroup;
     }
 
 }

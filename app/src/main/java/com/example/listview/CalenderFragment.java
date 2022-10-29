@@ -29,8 +29,6 @@ public class CalenderFragment extends Fragment {
     public TextView diaryTextView, textView2;
     public EditText contextEditText;
 
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

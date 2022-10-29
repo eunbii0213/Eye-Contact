@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.25133445850317027" />
+        <entry key="app/src/main/res/layout/fragment_calender.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_lens.xml" value="0.27214355468749996" />
         <entry key="app/src/main/res/layout/fragment_lenscare.xml" value="0.3812050430004116" />
         <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.1828774062816616" />
